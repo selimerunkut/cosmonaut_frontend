@@ -8,14 +8,20 @@ const routes: Routes = [
     path: '',
     component: MenuBarComponent,
     children: [
-      { path: 'home', loadChildren: () => import('./monster-dashboard/monster-dashboard.module').then(m => m.MonsterDashboardModule) },
-    ]
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./cosmonaut-dashboard/cosmonaut-dashboard.module').then(
+            (m) => m.CosmonautDashboardModule
+          ),
+      },
+    ],
   },
-  { path: '**', redirectTo: '/home' }
+  { path: '**', redirectTo: '/home' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
