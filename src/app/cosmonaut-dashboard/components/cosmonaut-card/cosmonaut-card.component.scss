@@ -1,0 +1,12 @@
+@mixin define-custom-property($name, $value) {
+  #{custom-property-name($name)}: $value;
+}
+
+.cosmonaut-card {
+  max-width: 250px;
+}
+
+.cosmonaut-header-image {
+  background-image: url("http://hackatom-pictures.blockscape.network/cosmonautInfo.access.owner");
+  background-size: cover;
+}

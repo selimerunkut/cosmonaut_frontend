@@ -1,0 +1,26 @@
+<mat-card class="cosmonaut-card">
+  <mat-card-header>
+    <div mat-card-avatar class="cosmonaut-header-image"></div>
+    <mat-card-title>{{cosmonautInfo.info.name}}</mat-card-title>
+    <mat-card-subtitle>Cosmonaut Lv: {{cosmonautInfo.info.level}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="http://hackatom-pictures.blockscape.network/{{cosmonautInfo.address}}">
+  <mat-card-content>
+    Token Name/NFT ID:
+    <div style="font-size: x-small;">
+      {{cosmonautInfo.address}}
+    </div>
+    Owner:
+    <div style="font-size: x-small;">
+      {{cosmonautInfo.access.owner}}
+    </div>
+    Description:
+    <p>
+      {{cosmonautInfo.info.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/home/marketplace']">Sell</button>
+    <button mat-button [routerLink]="['/home/battle']">Battle</button>
+  </mat-card-actions>
+</mat-card>
